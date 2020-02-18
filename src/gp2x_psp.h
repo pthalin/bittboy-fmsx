@@ -104,7 +104,7 @@ typedef struct gp2xCtrlData SceCtrlData;
 #define GP2X_VOLDOWN         (-7)
 # endif
 
-#define RG_A              SDLK_LCTRL
+#define RG_A              SDLK_LCTRL //ok
 #define RG_B              SDLK_LALT
 #define RG_X              SDLK_SPACE
 #define RG_Y              SDLK_LSHIFT
@@ -118,13 +118,13 @@ typedef struct gp2xCtrlData SceCtrlData;
 #define GP2X_LEFT           SDLK_LEFT
 #define GP2X_RIGHT          SDLK_RIGHT
 #define GP2X_A              RG_Y
-#define GP2X_B              RG_A
+#define GP2X_B              RG_A //ok
 #define GP2X_X              RG_B
 #define GP2X_Y              RG_X
 #define GP2X_L              SDLK_TAB
-#define GP2X_R              SDLK_BACKSPACE
+#define GP2X_R              SDLK_ESCAPE //SDLK_BACKSPACE
 #define GP2X_START          SDLK_RETURN
-#define GP2X_SELECT         SDLK_ESCAPE
+#define GP2X_SELECT         SDLK_RCTRL //SDLK_ESCAPE
 #define GP2X_UPLEFT          (-1)
 #define GP2X_UPRIGHT         (-2)
 #define GP2X_DOWNLEFT        (-3)
@@ -133,11 +133,9 @@ typedef struct gp2xCtrlData SceCtrlData;
 #define GP2X_VOLUP           (-6)
 #define GP2X_VOLDOWN         (-7)
 
-
 #else
 
 //some keys of the keyboard to emulate gp2x
-
 #define GP2X_UP             SDLK_UP //80 //SDLK_KP8
 #define GP2X_DOWN           SDLK_DOWN // 88 //SDLK_KP2
 #define GP2X_LEFT           SDLK_LEFT // 83 //SDLK_KP4

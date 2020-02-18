@@ -313,7 +313,7 @@ or implied, of Ludovic Jacomme.
     MSXK_RIGHT           , /*  KBD_RIGHT      */
     MSXK_DOWN            , /*  KBD_DOWN       */
     MSXK_LEFT            , /*  KBD_LEFT       */
-    MSXK_RETURN          , /*  KBD_TRIANGLE   */
+    MSXK_JOY_FIRE2       ,    //MSXK_RETURN          , /*  KBD_TRIANGLE   */
     MSXK_JOY_FIRE1       , /*  KBD_CIRCLE     */
     MSXK_SPACE           , /*  KBD_CROSS      */
     MSXK_DELETE          , /*  KBD_SQUARE     */
