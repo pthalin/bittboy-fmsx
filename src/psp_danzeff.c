@@ -111,11 +111,11 @@ danzeff_readInput(gp2xCtrlData pspctrl)
 		selected_y = y;
 	}
 	//if they are changing shift then that makes it dirty too
-	if ((!shifted && (pspctrl.Buttons & GP2X_CTRL_RTRIGGER)) || (shifted && !(pspctrl.Buttons & GP2X_CTRL_RTRIGGER)))
-		dirty = true;
+	//if ((!shifted && (pspctrl.Buttons & GP2X_CTRL_LTRIGGER)) || (shifted && !(pspctrl.Buttons & GP2X_CTRL_LTRIGGER)))
+	//	dirty = true;
 	
 	unsigned int pressed = 0; //character they have entered, 0 as that means 'nothing'
-	shifted = (pspctrl.Buttons & GP2X_CTRL_RTRIGGER)?true:false;
+	//shifted = (pspctrl.Buttons & GP2X_CTRL_LTRIGGER)?true:false;
 	
 	if (!holding)
 	{
@@ -123,22 +123,28 @@ danzeff_readInput(gp2xCtrlData pspctrl)
 		{
 			int innerChoice = 0;
 			if      (pspctrl.Buttons & GP2X_CTRL_TRIANGLE)
-				innerChoice = 0;
-			else if (pspctrl.Buttons & GP2X_CTRL_SQUARE)
 				innerChoice = 1;
+			else if (pspctrl.Buttons & GP2X_CTRL_SQUARE)
+				innerChoice = 0;
 			else if (pspctrl.Buttons & GP2X_CTRL_CROSS)
-				innerChoice = 2;
-			else //if (pspctrl.Buttons & GP2X_CTRL_CIRCLE)
 				innerChoice = 3;
+			else //if (pspctrl.Buttons & GP2X_CTRL_CIRCLE)
+				innerChoice = 2;
 			
 			//Now grab the value out of the array
 			pressed = modeChar[ mode*2 + shifted][y][x][innerChoice];
 		}
-		else if (pspctrl.Buttons& GP2X_CTRL_LTRIGGER) //toggle mode
+		else if (pspctrl.Buttons& GP2X_CTRL_RTRIGGER) //toggle mode
 		{
 			dirty = true;
-			mode++;
-			mode %= MODE_COUNT;
+			if(shifted) 
+			{
+				mode++;
+				mode %= MODE_COUNT;
+			}
+			shifted = !shifted;
+	
+	
 		}
 		else if (pspctrl.Buttons& GP2X_CTRL_SELECT)
 		{
@@ -151,7 +157,7 @@ danzeff_readInput(gp2xCtrlData pspctrl)
 	}
 
 //RTRIGGER doesn't set holding
-	holding = pspctrl.Buttons & ~(GP2X_CTRL_RTRIGGER|GP2X_CTRL_UP|GP2X_CTRL_DOWN|GP2X_CTRL_LEFT|GP2X_CTRL_RIGHT); 
+	holding = pspctrl.Buttons & ~(GP2X_CTRL_LTRIGGER|GP2X_CTRL_UP|GP2X_CTRL_DOWN|GP2X_CTRL_LEFT|GP2X_CTRL_RIGHT); 
 	
 	return pressed;
 }

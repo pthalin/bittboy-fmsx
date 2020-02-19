@@ -315,8 +315,8 @@ or implied, of Ludovic Jacomme.
     MSXK_LEFT            , /*  KBD_LEFT       */
     MSXK_JOY_FIRE2       ,    //MSXK_RETURN          , /*  KBD_TRIANGLE   */
     MSXK_JOY_FIRE1       , /*  KBD_CIRCLE     */
-    MSXK_SPACE           , /*  KBD_CROSS      */
-    MSXK_DELETE          , /*  KBD_SQUARE     */
+    MSXK_F5, //MSXK_SPACE           , /*  KBD_CROSS      */
+    MSXK_F1, //MSXK_DELETE          , /*  KBD_SQUARE     */
     -1                   , /*  KBD_SELECT     */
     -1                   , /*  KBD_START      */
     KBD_LTRIGGER_MAPPING , /*  KBD_LTRIGGER   */
