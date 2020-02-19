@@ -1,17 +1,13 @@
-# Welcome to Dingux MSX
+# Welcome to Bittboy MSX
 
 ## Original Author of fMSX
 
-```
-fMSX-SDL port            by Vincent van Dam (2001).
-Original fMSX            by Marat Fayzullin (1994-2001).
-YM2413/PSG/SCC emulation by Mitsutaka Okazaki (2001).
-Y8950 emulation          by Tatsuyuki Satoh (1999/2000).
-```
-
-* Author of the Dingoo/Dingux port version 
-
-Ludovic.Jacomme also known as Zx-81 (zx81.zx81@gmail.com)
+* fMSX-SDL port            Vincent van Dam (2001).
+* Original fMSX            Marat Fayzullin (1994-2001).
+* YM2413/PSG/SCC emulation Mitsutaka Okazaki (2001).
+* Y8950 emulation          Tatsuyuki Satoh (1999/2000).
+* Dingux port version      Ludovic.Jacomme also known as Zx-81 (zx81.zx81@gmail.com)
+* Bittboy version          pthalin (https://github.com/pthalin)
 
 
 ## INTRODUCTION
@@ -26,6 +22,7 @@ The Dingux part of this package is under freeBSD license, read LICENSE.txt file
 for more information about it. Original fMSX code is under 
 "Marat Fayzullin's license" (see http://fms.komkon.org/fMSX/ for details).
 
+Bittboy-MSX is an adaptation of Dingux-MSX for Bittboy.
 
 ## INSTALLATION
 
@@ -35,79 +32,41 @@ SD card.
 Put your rom image files on "roms" sub-directory.
 
 For any comments or questions on this version, please visit 
-http://zx81.zx81.free.fr, http://zx81.dcemu.co.uk or 
-http://www.gp32x.com/
-
+https://github.com/pthalin
 
 ## CONTROL
 
-### Virtual keyboard
+### Main menu
+		Press R      to enter in emulator main menu.
+#### In the main menu
 
-In the emulator window, there are three different mapping 
-(standard, left trigger, and right Trigger mappings). 
-You can toggle between while playing inside the emulator using 
-the two Dingux trigger keys.
+		A        Select
+		TA/TB    Go Back
+		SELECT   Reset the emulator
 
-In the MSX emulator window 
-	
-* Normal mapping :
+### Joystick & Keyboard
+		START    Open/close the Virtual Keyboard	
 
-		Dingux     MSX 
-		Y          Delete
-		X          Return
-		B          Space
-		A          Fire1
-		Up         Up
-		Down       Down
-		Left       Left
-		Right      Right
-		LTrigger   Toogle with L keyboard mapping
-		RTrigger   Toggle with R keyboard mapping
+#### Mapping with closed keyboard:
 
-* LTrigger mapping :
-
-		Dingux     MSX 
-		Y          Hotkey FPS
-		X          Hotkey Load state
-		B          Hotkey Save state
-		A          Hotkey render
+		Bittboy    MSX 
+		A          Fire A
+		B          Fire B
+		TA         F5 
+		TB         F1 
 		Up         Up
 		Down       Down
 		Left       Left
 		Right      Right
 
-* RTrigger mapping :
 
-		Dingux     MSX 
-		Y          Escape
-		X          Return
-		B          Hotkey auto-fire
-		A          Fire2
-		Up         Up
-		Down       Down
-		Left       Left
-		Right      Right
-
-		Press Menu      to enter in emulator main menu.
-		Press Select    open/close the virtual keyboard
-
-* In the main menu
-
-		RTrigger   Reset the emulator
-		X          Go Up directory
-		B          Valid
-		A          Valid
-		Y          Go Back to the emulator window
-
-The On-Screen Keyboard of "Danzel" and "Jeff Chen"
+#### Virtual Keyboard
 
 Use digital pad to choose one of the 9 squares, and
-use X, Y, A, B to choose one of the 4 letters of the
+use A, B, TA, TB to choose one of the 4 letters of the
 highlighted square.
 
-Use LTrigger and RTrigger to see other 9 squares
-figures.
-
+Use SELECT to switch between four different virtual keyboard panels.
 
 ## LOADING MSX ROM FILES
 
@@ -277,7 +236,7 @@ You can modify several joystick settings value in the settings menu of this emul
 The following parameters are available :
 
 ```
-Swap Analog/Cursor : swap key mapping between Dingux analog pad and Dingux digital pad
+Swap Analog/Cursor : Do not change
 Auto fire period   : auto fire period
 Auto fire mode     : auto fire mode active or not
 ```
@@ -285,10 +244,7 @@ Auto fire mode     : auto fire mode active or not
 
 ## COMPILATION
 
-It has been developped under Linux FC9 using gcc with DINGUX SDK. 
-All tests have been done using a Dingoo with Dingux installed
+It has been developped under Linux using gcc with DINGUX SDK. 
+All tests have been done using a Bittboy.
 To rebuild the homebrew run the Makefile in the src archive.
 
-Enjoy,
-
-Zx

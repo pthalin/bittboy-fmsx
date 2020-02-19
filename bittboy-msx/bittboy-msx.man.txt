@@ -8,8 +8,12 @@ MSDOS, AmigaOS, etc.
 See http://fms.komkon.org/fMSX/ for further
 informations.
 
-Dingux-MSX is a port on Dingoo of my previous 
+Dingux-MSX is a port on Dingoo of previous 
 Gp2X-Wiz port version.
+
+Bittboy-MSX is an adaptation of Dingux-MSX for
+Bittboy. S ince it lacks the L/R Trigger 
+keys are mapped diffrently.
 
 
 CONTROL
@@ -21,66 +25,35 @@ In the MSX emulator window
 
 Normal mapping :
 
-  Dingux        MSX 
-    
-  Y          Delete
-  X          Return
-  B          Space
-  A          Fire1
+  Bittboy    MSX 
+
+  A          Fire A
+  B          Fire B
+  TA         F5   
+  TB         F1
   Up         Up
   Down       Down
   Left       Left
   Right      Right
 
-LTrigger   Toogle with L keyboard mapping
-RTrigger   Toggle with R keyboard mapping
-
-LTrigger mapping :
-
-  Dingux        MSX 
-    
-  Y          Hotkey FPS
-  X          Hotkey Load state
-  B          Hotkey Save state
-  A          Hotkey render
-  Up         Up
-  Down       Down
-  Left       Left
-  Right      Right
-
-RTrigger mapping :
-
-  Dingux        MSX 
-    
-  Y          Escape
-  X          Return
-  B          Hotkey auto-fire
-  A          Fire2
-  Up         Up
-  Down       Down
-  Left       Left
-  Right      Right
-
-Press Menu      to enter in emulator main menu.
-Press Select    open/close the virtual keyboard
+Press R        to enter in emulator main menu.
+Press START    open/close the virtual keyboard
 
 In the main menu
 
-RTrigger   Reset the emulator
-
-Y          Go Up directory
-X          Valid
-B          Valid
-A          Go Back to the emulator window
+SELECT     Reset the emulator
+A          Valid
+B          -
+TB         Go Back
+TA         Go Back
 
 The On-Screen Keyboard of "Danzel" and "Jeff Chen"
 
 Use digital pad to choose one of the 9 squares, and
-use X, Y, A, B to choose one of the 4 letters of the
+use A, B, TA, TB to choose one of the 4 letters of the
 highlighted square.
 
-Use LTrigger and RTrigger to see other 9 squares
-figures.
+Use SELECT to switch between four virtual keyboard panels.
 
 
 LOADING MSX ROM FILES
@@ -91,10 +64,9 @@ have to put your rom file (with .zip, .rom, .mx1 or
 .mx2 file extension) on your SD memory card in the
 'roms' directory.
 
-Then, while inside Dingux-MSX emulator, just press
-SELECT to enter in the emulator main menu, and then
-using the file selector choose one rom file to load
-in your emulator.
+Then, while inside MSX emulator, just press R to enter
+in the emulator main menu, and then using the file 
+selector choose one rom file to load in your emulator.
 
 Back to the emulator window, the rom should stard
 automatically.
@@ -112,7 +84,7 @@ choose sequentially files beginning with the given
 letter. You can use the Run key of the virtual
 keyboard to launch the rom.
 
-You may use the Trigger key to swap between the two
+You may use the SELECT key to swap between the four
 virtual keyboard panels (numbers & letters)
 
 
@@ -144,8 +116,8 @@ LOADING KEY MAPPING FILES
 ------------
 
 For given games, the default keyboard mapping between
-Dingux Keys and MSX keys, is not suitable, and the game
-can't be played on Dingux-MSX.
+Bitboy Keys and MSX keys, is not suitable, and the game
+can't be played on Bitbot-MSX.
 
 To overcome the issue, you can write your own
 mapping file. Using notepad for example you can edit
@@ -190,7 +162,7 @@ keyboard, settings).
 CHEAT CODE (.CHT)
 ----------
 
-  You can use cheat codes with Dingux-MSX You can add
+  You can use cheat codes with Bittboy-MSX You can add
 your own cheat codes in the cheat.txt file and then
 import them in the cheat menu.
 
@@ -293,7 +265,7 @@ V-Sync
   vertical synchronisation (slow down the emulator)
 
 Clock frequency    
-  Dingux clock frequency, by default the value is set to
+  Bittboy clock frequency, by default the value is set to
   200Mhz, and should be enough for most of all games.
 
 JOYSTICK SETTINGS
@@ -304,17 +276,13 @@ settings menu of this emulator.  The following
 parameters are available :
 
   Swap Analog/Cursor : 
-    swap key mapping between Dingux analog pad and Dingux
-    digital pad
+    Do not change!
 
   Auto fire period : 
     auto fire period
 
   Auto fire mode : 
     auto fire mode active or not
+           
 
-
-  Enjoy,
-
-            Zx
 

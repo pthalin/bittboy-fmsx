@@ -43,7 +43,7 @@ SDL_main(int argc,char *argv[])
   memset(&MSX, 0, sizeof(MSX_t));
 
   static char cfg_dir[MAX_PATH];
-  snprintf(MSX.msx_home_dir, sizeof(MSX.msx_home_dir), "%s/.dingux-msx", getenv("HOME")); mkdir(MSX.msx_home_dir, 0777);
+  snprintf(MSX.msx_home_dir, sizeof(MSX.msx_home_dir), "%s/.bittboy-msx", getenv("HOME")); mkdir(MSX.msx_home_dir, 0777);
   snprintf(cfg_dir, MAX_PATH, "%s/cht",  MSX.msx_home_dir); mkdir(cfg_dir, 0777);
   snprintf(cfg_dir, MAX_PATH, "%s/disk", MSX.msx_home_dir); mkdir(cfg_dir, 0777);
   snprintf(cfg_dir, MAX_PATH, "%s/joy",  MSX.msx_home_dir); mkdir(cfg_dir, 0777);

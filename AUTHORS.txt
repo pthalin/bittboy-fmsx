@@ -11,3 +11,6 @@ Wiz-MSX   : Porting on GP2X-Wiz
 Dingux-MSX: Porting on Dingoo
 
   Ludovic Jacomme (zx81.zx81@gmail.com)
+
+Bittboy-MSX: Porting on Bittboy
+  pthalin (https://github.com/pthalin)
