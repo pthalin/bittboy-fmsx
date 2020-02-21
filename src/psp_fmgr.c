@@ -611,14 +611,14 @@ psp_fmgr_menu(int format, int drive_id)
     strcpy(user_filedir_joy, user_filedir_kbd);
     strcpy(user_filedir_set, user_filedir_kbd);
     strcpy(user_filedir_cht, user_filedir_kbd);
-    strcpy(user_filedir_rom, user_filedir_kbd);
-    strcpy(user_filedir_disk, user_filedir_kbd);
+    strcpy(user_filedir_rom, "/mnt/roms/MSX/");
+    strcpy(user_filedir_disk, "/mnt/roms/MSX/");
     strcat(user_filedir_kbd, "/kbd/");
     strcat(user_filedir_set, "/set/");
     strcat(user_filedir_cht, "/cht/");
     strcat(user_filedir_joy, "/joy/");
-    strcat(user_filedir_rom, "/roms/");
-    strcat(user_filedir_disk, "/disk/");
+    //strcat(user_filedir_rom, "/roms/");
+    //strcat(user_filedir_disk, "/disk/");
   }
 
   if (format == FMGR_FORMAT_KBD) user_filedir = user_filedir_kbd;

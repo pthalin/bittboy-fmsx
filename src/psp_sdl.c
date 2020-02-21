@@ -411,6 +411,7 @@ psp_sdl_display_splash()
   int col = psp_sdl_rgb(0xa0, 0xa0, 0xa0);
 
   psp_sdl_blit_splash();
+  psp_sdl_print(120, 208, "BITTBOY MSX", col);
   psp_sdl_print(x, y, MSX_VERSION, col);
   psp_sdl_flip();
 

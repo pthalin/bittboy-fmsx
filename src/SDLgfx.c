@@ -186,19 +186,22 @@ int InitMachine(int argc, char* argv[])
 	if (argc > 1)
 	{
 		Disks[0][1]=Disks[1][1]=0;
-		if (strstr (argv[1],".rom") != NULL || strstr (argv[1],".mx1") != NULL || strstr (argv[1],".mx2") != NULL) 
+		if ( strstr (argv[1],".rom") != NULL || strstr (argv[1],".mx1") != NULL || strstr (argv[1],".mx2") != NULL ||
+	             strstr (argv[1],".ROM") != NULL || strstr (argv[1],".MX1") != NULL || strstr (argv[1],".MX2") != NULL )
 		{
 			if (Verbose) printf("File is a raw ROM file\n");
 			snprintf(CartA, sizeof(CartA), "%s", argv[1]);
 			loaded_msx = 1;
 		}
-		if ( strstr (argv[1],".zip") != NULL) 
+		if ( strstr (argv[1],".zip") != NULL ||
+                     strstr (argv[1],".ZIP") != NULL )
 		{
 			if (Verbose) printf("File is a ROM file (ZIP file)\n");
 			snprintf(ZipFile, sizeof(ZipFile), "%s", argv[1]);
 			loaded_msx = 3;
 		}
-		else if (strstr (argv[1],".dsk") != NULL) 
+		else if ( strstr (argv[1],".dsk") != NULL ||
+			  strstr (argv[1],".DSK") != NULL )
 		{
 			if (Verbose) printf("File is a DSK file\n");
 			snprintf(DiskA, sizeof(DiskA), "%s", argv[1]);
