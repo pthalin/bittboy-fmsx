@@ -1,0 +1,5 @@
+Extract file the files and copy the bittboy-msx folder to to the emus folder on the Bittboy.
+Copy the file "24-bittboy-msx" (in folder bittboy-msx) to the foloder "gmenu2x/sections/emulators/" on the Bittboy. 
+Put your rom files in the folder "roms/MSX" on the Bittboy.
+
+
