@@ -87,8 +87,8 @@ psp_joy_load_settings_file(FILE *JoyFile)
     *Scan = '\0';
     Value = atoi(Scan + 1);
 
-    if (!strcasecmp(Buffer,"psp_reverse_analog")) MSX.psp_reverse_analog = Value;
-    else
+    //if (!strcasecmp(Buffer,"psp_reverse_analog")) MSX.psp_reverse_analog = Value;
+    //else
     if (!strcasecmp(Buffer,"msx_auto_fire_period")) MSX.msx_auto_fire_period = Value;
   }
 
@@ -107,7 +107,7 @@ psp_joy_save_settings(char *joy_filename)
 
   if (JoyFile != (FILE*)0) {
 
-    fprintf( JoyFile, "psp_reverse_analog=%d\n"   , MSX.psp_reverse_analog);
+    //fprintf( JoyFile, "psp_reverse_analog=%d\n"   , MSX.psp_reverse_analog);
     fprintf( JoyFile, "msx_auto_fire_period=%d\n", MSX.msx_auto_fire_period);
 
     error = 0;

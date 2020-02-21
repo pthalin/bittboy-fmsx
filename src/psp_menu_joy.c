@@ -55,7 +55,7 @@ or implied, of Ludovic Jacomme.
 extern SDL_Surface *back_surface;
 
 enum {
-  MENU_JOY_ANALOG,
+ // MENU_JOY_ANALOG,
   MENU_JOY_AUTOFIRE_T,
   MENU_JOY_AUTOFIRE_M,
   MENU_JOY_LOAD,
@@ -67,7 +67,7 @@ enum {
 
   static menu_item_t menu_list[] =
   {
-    { "Swap Analog/Cursor :"},
+   // { "Swap Analog/Cursor :"},
     { "Auto fire period   :"},
     { "Auto fire mode     :"},
 
@@ -116,12 +116,12 @@ psp_display_screen_joystick_menu(void)
 
     psp_sdl_back2_print(x, y, menu_list[menu_id].title, color);
 
-    if (menu_id == MENU_JOY_ANALOG) {
-      if (psp_reverse_analog) strcpy(buffer,"yes");
-      else                    strcpy(buffer,"no ");
-      string_fill_with_space(buffer, 4);
-      psp_sdl_back2_print(140, y, buffer, color);
-    } else
+//    if (menu_id == MENU_JOY_ANALOG) {
+//      if (psp_reverse_analog) strcpy(buffer,"yes");
+//      else                    strcpy(buffer,"no ");
+//      string_fill_with_space(buffer, 4);
+//      psp_sdl_back2_print(140, y, buffer, color);
+//    } else
     if (menu_id == MENU_JOY_AUTOFIRE_T) {
       sprintf(buffer,"%d", msx_auto_fire_period+1);
       string_fill_with_space(buffer, 7);
@@ -305,8 +305,8 @@ psp_joystick_menu(void)
       {
         case MENU_JOY_AUTOFIRE_T  : psp_joystick_menu_autofire( step );
         break;              
-        case MENU_JOY_ANALOG     : psp_reverse_analog = ! psp_reverse_analog;
-        break;              
+        //case MENU_JOY_ANALOG     : psp_reverse_analog = ! psp_reverse_analog;
+        //break;              
         case MENU_JOY_AUTOFIRE_M  : msx_auto_fire_mode = ! msx_auto_fire_mode;
         break;              
       }
