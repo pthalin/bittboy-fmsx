@@ -33,12 +33,12 @@ Put your rom image files on "roms" sub-directory.
 For any comments or questions on this version, please visit 
 https://github.com/pthalin
 
-## CONTROL
+## CONTROLS
 
 ### Main menu
-		R      Main options menu
+		R      	Open Main Menu
 
-#### In the main menu
+#### In the Main Menu
 		A        Select
 		TA/TB    Go Back
 		SELECT   Reset the emulator
@@ -69,17 +69,11 @@ https://github.com/pthalin
   		Left       Left
   		Right      Right
 
-  Press Menu      to enter in emulator main menu.
-  Press Select    open/close the virtual keyboard
-
-
 #### Virtual Keyboard Mapping
-
-Use digital pad to choose one of the 9 squares, and
-use A, B, TA, TB to choose one of the 4 letters of the
-highlighted square.
-
-Use SELECT to switch between four different virtual keyboard panels.
+		
+		Up/Down/Left/Right 	Select one of the 9 squares
+		A/B/TA/TB 			Select one of the 4 letters in the highlighted square
+		SELECT 				Switch between four different virtual keyboard panels
 
 ## LOADING MSX ROM FILES
 
