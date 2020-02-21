@@ -9,7 +9,7 @@ SYSROOT     := $(shell $(CC) --print-sysroot)
 SDL_CFLAGS  := $(shell $(SYSROOT)/usr/bin/sdl-config --cflags)
 SDL_LIBS    := $(shell $(SYSROOT)/usr/bin/sdl-config --libs)
 
-OUTPUTNAME = ./bittboy-fmsx/fmsx
+OUTPUTNAME = ./bittboy-msx/bittboy-msx
 DEFINES = -DHAVE_STDINT_H -DVERSION_BITTBOY 
 INCLUDES = -Iinclude $(SDL_CFLAGS)
 OPT_FLAGS  = -Ofast -fdata-sections -fdata-sections -fno-common -fno-PIC -flto
