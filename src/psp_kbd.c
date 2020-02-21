@@ -354,7 +354,7 @@ or implied, of Ludovic Jacomme.
     MSXK_JOY_DOWN        , /*  KBD_DOWN       */
     MSXK_C_DECFIRE       , /*  KBD_LEFT       */
     MSXK_RETURN          , /*  KBD_TRIANGLE   */
-    MSXK_JOY_FIRE2       , /*  KBD_CIRCLE     */
+    MSXK_C_FPS,    //MSXK_JOY_FIRE2       , /*  KBD_CIRCLE     */
     MSXK_C_AUTOFIRE      , /*  KBD_CROSS      */
     MSXK_ESC             , /*  KBD_SQUARE     */
     -1                   , /*  KBD_SELECT     */

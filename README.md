@@ -1,13 +1,12 @@
 # Welcome to Bittboy MSX
 
-## Original Author of fMSX
-
-* fMSX-SDL port            Vincent van Dam (2001).
-* Original fMSX            Marat Fayzullin (1994-2001).
-* YM2413/PSG/SCC emulation Mitsutaka Okazaki (2001).
-* Y8950 emulation          Tatsuyuki Satoh (1999/2000).
-* Dingux port version      Ludovic.Jacomme also known as Zx-81 (zx81.zx81@gmail.com)
-* Bittboy version          pthalin (https://github.com/pthalin)
+## Original Authors
+		Original fMSX            Marat Fayzullin (1994-2001).
+		fMSX-SDL port            Vincent van Dam (2001).
+		YM2413/PSG/SCC emulation Mitsutaka Okazaki (2001).
+		Y8950 emulation          Tatsuyuki Satoh (1999/2000).
+		Dingux port version      Ludovic.Jacomme also known as Zx-81 (zx81.zx81@gmail.com)
+		Bittboy version          pthalin (https://github.com/pthalin)
 
 
 ## INTRODUCTION
@@ -37,18 +36,18 @@ https://github.com/pthalin
 ## CONTROL
 
 ### Main menu
-		Press R      to enter in emulator main menu.
-#### In the main menu
+		R      Main options menu
 
+#### In the main menu
 		A        Select
 		TA/TB    Go Back
 		SELECT   Reset the emulator
 
-### Joystick & Keyboard
-		START    Open/close the Virtual Keyboard	
+### Change Mapping
+		START    Open/close the Virtual Keyboard Mapping	
+		SELECT   Press for Alt. Mapping
 
-#### Mapping with closed keyboard:
-
+#### Normal Mapping
 		Bittboy    MSX 
 		A          Fire A
 		B          Fire B
@@ -59,8 +58,22 @@ https://github.com/pthalin
 		Left       Left
 		Right      Right
 
+#### Alt. Mapping
+		Bittboy    MSX 
+		A          Hotkey show FPS
+		B          Return
+		TA         Hotkey auto-fire enable/disable
+		TB         Escape
+		Up         Up
+  		Down       Down
+  		Left       Left
+  		Right      Right
 
-#### Virtual Keyboard
+  Press Menu      to enter in emulator main menu.
+  Press Select    open/close the virtual keyboard
+
+
+#### Virtual Keyboard Mapping
 
 Use digital pad to choose one of the 9 squares, and
 use A, B, TA, TB to choose one of the 4 letters of the
@@ -225,7 +238,7 @@ MSX Ram size       : memory size of MSX
 Render mode        : many render modes are available with different 
 			geometry that should covered all games requirements
 V-Sync             : vertical synchronisation (slow down the emulator)
-Clock frequency    : Dingux clock frequency, by default the value is set to
+Clock frequency    : Clock frequency, by default the value is set to
 			200Mhz, and should be enough for most of all games.
 ```
 
@@ -236,7 +249,6 @@ You can modify several joystick settings value in the settings menu of this emul
 The following parameters are available :
 
 ```
-Swap Analog/Cursor : Do not change
 Auto fire period   : auto fire period
 Auto fire mode     : auto fire mode active or not
 ```
@@ -244,7 +256,12 @@ Auto fire mode     : auto fire mode active or not
 
 ## COMPILATION
 
-It has been developped under Linux using gcc with DINGUX SDK. 
+It has been developped under Linux using gcc with BITTBOY Build root.
+
+https://github.com/pthalin/buildroot
+
+Build witha the Makefile in the src archive.
+ 
 All tests have been done using a Bittboy.
-To rebuild the homebrew run the Makefile in the src archive.
+
 
