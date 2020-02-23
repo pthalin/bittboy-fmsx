@@ -1,7 +1,8 @@
 # Welcome to Bittboy MSX
 
-Bittboy MSX is a MSX emulator for the Bittboy console.
+Bittboy MSX is an MSX emulator for the Bittboy console.
 
+[Follow me on Facebook](https://www.facebook.com/patriksretrotech/)
 
 ## CONTROLS
 
