@@ -1,57 +1,20 @@
 # Welcome to Bittboy MSX
 
-## Original Authors
-		Original fMSX            Marat Fayzullin (1994-2001).
-		fMSX-SDL port            Vincent van Dam (2001).
-		YM2413/PSG/SCC emulation Mitsutaka Okazaki (2001).
-		Y8950 emulation          Tatsuyuki Satoh (1999/2000).
-		Dingux port version      Ludovic.Jacomme also known as Zx-81 (zx81.zx81@gmail.com)
-		Bittboy version          pthalin (https://github.com/pthalin)
+Bittboy MSX is a MSX emulator for the Bittboy console.
 
-
-
-
-## INTRODUCTION
-
-fMSX emulates MSX, MSX2, and MSX2+ 8bit home computers. It runs MSX/MSX2/MSX2+
-software on many different platforms including Windows, MacOS, Unix, MSDOS, 
-AmigaOS, etc. See http://fms.komkon.org/fMSX/ for further informations.
-
-Dingux MSX is a port on Dingoo/Dingux of my previous GP2X-Wiz port version.
-
-The Dingux part of this package is under freeBSD license, read LICENSE.txt file 
-for more information about it. Original fMSX code is under 
-"Marat Fayzullin's license" (see http://fms.komkon.org/fMSX/ for details).
-
-Bittboy-MSX is an adaptation of Dingux-MSX for Bittboy.
-
-## INSTALLATION
-
-Unzip the zip file, and copy the content of the directory local to your
-SD card.
-
-Put your rom image files on "roms" sub-directory.
-
-For any comments or questions on this version, please visit 
-https://github.com/pthalin
 
 ## CONTROLS
 
-![](controls.svg)
+There are three modes for the key mapping Normal, Alt and Keyboard.
 
-### Main menu
-		R      	Open Main Menu
+![](controls.svg) ![](alt_controls.svg) ![](kbd_controls.svg)
 
-#### In the Main Menu
-		A        Select
-		TA/TB    Go Back
-		SELECT   Reset the emulator
 
 ### Change Mapping
-		START    Open/close the Virtual Keyboard Mapping	
-		SELECT   Press for Alt. Mapping
+		START    Open/close the Keyboard Mapping	
+		SELECT   Keep pressed for Alt mapping
 
-#### Normal Mapping
+### Normal Mapping
 		Bittboy    MSX 
 		A          Fire A
 		B          Fire B
@@ -62,7 +25,7 @@ https://github.com/pthalin
 		Left       Left
 		Right      Right
 
-#### Alt. Mapping
+### Alt. Mapping
 		Bittboy    MSX 
 		A          Hotkey show FPS
 		B          Return
@@ -73,11 +36,19 @@ https://github.com/pthalin
   		Left       Left
   		Right      Right
 
-#### Virtual Keyboard Mapping
+### Keyboard Mapping
 		
 		Up/Down/Left/Right 	Select one of the 9 squares
-		A/B/TA/TB 			Select one of the 4 letters in the highlighted square
-		SELECT 				Switch between four different virtual keyboard panels
+		A/B/TA/TB 		Select one of the 4 letters in the highlighted square
+		SELECT 			Switch between four different virtual keyboard panels
+
+### Main menu
+		R      	Open Main Menu
+#### In the Main Menu
+		A        Select
+		TA/TB    Go Back
+		SELECT   Reset the emulator
+
 
 ## LOADING MSX ROM FILES
 
@@ -217,6 +188,7 @@ and you can save it using the "Save cheat" menu.
 Let's enjoy 1942 with infinite life !!
 
 
+
 ## SETTINGS
 
 You can modify several settings value in the settings menu of this emulator.
@@ -261,5 +233,34 @@ https://github.com/pthalin/buildroot
 Build witha the Makefile in the src archive.
  
 All tests have been done using a Bittboy.
+
+## Original Authors
+		Original fMSX            Marat Fayzullin (1994-2001).
+		fMSX-SDL port            Vincent van Dam (2001).
+		YM2413/PSG/SCC emulation Mitsutaka Okazaki (2001).
+		Y8950 emulation          Tatsuyuki Satoh (1999/2000).
+		Dingux port version      Ludovic.Jacomme also known as Zx-81 (zx81.zx81@gmail.com)
+		Bittboy version          pthalin (https://github.com/pthalin)
+
+
+
+
+## About
+
+fMSX emulates MSX, MSX2, and MSX2+ 8bit home computers. It runs MSX/MSX2/MSX2+
+software on many different platforms including Windows, MacOS, Unix, MSDOS, 
+AmigaOS, etc. See http://fms.komkon.org/fMSX/ for further informations.
+
+Dingux MSX is a port on Dingoo/Dingux of my previous GP2X-Wiz port version.
+
+The Dingux part of this package is under freeBSD license, read LICENSE.txt file 
+for more information about it. Original fMSX code is under 
+"Marat Fayzullin's license" (see http://fms.komkon.org/fMSX/ for details).
+
+Bittboy-MSX is an adaptation of Dingux-MSX for Bittboy 3.5
+
+## INSTALLATION
+
+See INSTALL.txt
 
 
