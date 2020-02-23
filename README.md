@@ -9,6 +9,8 @@
 		Bittboy version          pthalin (https://github.com/pthalin)
 
 
+
+
 ## INTRODUCTION
 
 fMSX emulates MSX, MSX2, and MSX2+ 8bit home computers. It runs MSX/MSX2/MSX2+
@@ -34,6 +36,8 @@ For any comments or questions on this version, please visit
 https://github.com/pthalin
 
 ## CONTROLS
+
+![](controls.svg)
 
 ### Main menu
 		R      	Open Main Menu

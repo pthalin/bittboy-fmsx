@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="97.541771mm"
-   height="101.03425mm"
-   viewBox="0 0 97.541771 101.03425"
+   width="245.77448"
+   height="254.57442"
+   viewBox="0 0 97.541742 101.03428"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -30,8 +30,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="282.24008"
-     inkscape:cy="294.50613"
+     inkscape:cx="282.23631"
+     inkscape:cy="62.720442"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -43,7 +43,10 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     viewbox-height="101"
+     units="px"
+     scale-x="1.5" />
   <metadata
      id="metadata5">
     <rdf:RDF>
