@@ -61,7 +61,7 @@ psp_joy_default_settings()
   MSX.msx_auto_fire         = 0;
   MSX.msx_auto_fire_period  = 10;
   MSX.msx_auto_fire_pressed = 0;
-  MSX.psp_reverse_analog     = 0;
+  MSX.bittboy_ta_func       = MSXK_F5;
 }
 
 int
@@ -87,8 +87,8 @@ psp_joy_load_settings_file(FILE *JoyFile)
     *Scan = '\0';
     Value = atoi(Scan + 1);
 
-    //if (!strcasecmp(Buffer,"psp_reverse_analog")) MSX.psp_reverse_analog = Value;
-    //else
+    if (!strcasecmp(Buffer,"bittboy_ta_func"))      MSX.bittboy_ta_func = Value;
+    else
     if (!strcasecmp(Buffer,"msx_auto_fire_period")) MSX.msx_auto_fire_period = Value;
   }
 
@@ -107,7 +107,7 @@ psp_joy_save_settings(char *joy_filename)
 
   if (JoyFile != (FILE*)0) {
 
-    //fprintf( JoyFile, "psp_reverse_analog=%d\n"   , MSX.psp_reverse_analog);
+    fprintf( JoyFile, "bittboy_ta_func=%d\n"     , MSX.bittboy_ta_func);
     fprintf( JoyFile, "msx_auto_fire_period=%d\n", MSX.msx_auto_fire_period);
 
     error = 0;

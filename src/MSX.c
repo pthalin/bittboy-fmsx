@@ -2629,7 +2629,7 @@ msx_default_settings()
   MSX.msx_uperiod         = 100;
   MSX.msx_use_2413        = 0;
   MSX.msx_render_mode     = MSX_RENDER_FULL; //MSX_RENDER_FAST;
-  MSX.psp_reverse_analog  = 0;
+  MSX.bittboy_ta_func     = MSXK_F5;
 # if !defined(CAANOO_MODE)
   MSX.psp_cpu_clock       = GP2X_DEF_EMU_CLOCK;
 # endif
@@ -2667,7 +2667,6 @@ loc_msx_save_settings(char *chFileName)
 # if !defined(CAANOO_MODE)
     fprintf(FileDesc, "psp_cpu_clock=%d\n"      , MSX.psp_cpu_clock);
 # endif
-    fprintf(FileDesc, "psp_reverse_analog=%d\n" , MSX.psp_reverse_analog);
     fprintf(FileDesc, "psp_skip_max_frame=%d\n" , MSX.psp_skip_max_frame);
     fprintf(FileDesc, "psp_sound_volume=%d\n"   , MSX.psp_sound_volume);
     fprintf(FileDesc, "msx_snd_enable=%d\n"     , MSX.msx_snd_enable);
@@ -2740,7 +2739,7 @@ loc_msx_load_settings(char *chFileName)
     if (!strcasecmp(Buffer,"psp_cpu_clock"))      MSX.psp_cpu_clock = Value;
     else
 # endif
-    if (!strcasecmp(Buffer,"psp_reverse_analog")) MSX.psp_reverse_analog = Value;
+    if (!strcasecmp(Buffer,"bittboy_ta_func")) MSX.bittboy_ta_func = Value;
     else
     if (!strcasecmp(Buffer,"psp_skip_max_frame")) MSX.psp_skip_max_frame = Value;
     else
@@ -3613,8 +3612,6 @@ msx_treat_command_key(int msx_idx)
   switch (msx_idx)
   {
     case MSXK_C_FPS: MSX.msx_view_fps = ! MSX.msx_view_fps;
-    break;
-    case MSXK_C_JOY: MSX.psp_reverse_analog = ! MSX.psp_reverse_analog;
     break;
     case MSXK_C_RENDER:
       psp_sdl_black_screen();

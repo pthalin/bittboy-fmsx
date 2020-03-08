@@ -843,18 +843,10 @@ int
 msx_decode_key(int psp_b, int button_pressed)
 {
   int wake = 0;
-  int reverse_cursor = ! MSX.psp_reverse_analog;
-
-  if (reverse_cursor) {
-    if ((psp_b >= KBD_JOY_UP  ) &&
-        (psp_b <= KBD_JOY_LEFT)) {
-      psp_b = psp_b - KBD_JOY_UP + KBD_UP;
-    } else
-    if ((psp_b >= KBD_UP  ) &&
-        (psp_b <= KBD_LEFT)) {
-      psp_b = psp_b - KBD_UP + KBD_JOY_UP;
-    }
-  }
+  
+  if (psp_b == KBD_CROSS /*TA*/) {
+    psp_kbd_mapping[psp_b] = MSX.bittboy_ta_func;
+  } 
 
   if (psp_b == KBD_START) {
      if (button_pressed) psp_kbd_enter_danzeff();

@@ -84,7 +84,7 @@ MSX_LAST_RENDER
     int        psp_cpu_clock;
     int        msx_current_clock;
 # endif
-    int        psp_reverse_analog;
+    int        bittboy_ta_func;
     int        psp_sound_volume;
     int        msx_snd_enable;
     int        msx_view_fps;
