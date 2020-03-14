@@ -30,7 +30,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="148.66488"
+     inkscape:cx="66.423803"
      inkscape:cy="62.720442"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -56,7 +56,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,7 +83,7 @@
          id="tspan880"
          x="155.57346"
          y="141.2738"
-         style="stroke-width:0.12054122">F1</tspan></text>
+         style="stroke-width:0.12054122">F1*</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.82164764px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.12054122"
@@ -94,7 +94,7 @@
          id="tspan880-6"
          x="155.57346"
          y="156.93735"
-         style="stroke-width:0.12054122">F5</tspan></text>
+         style="stroke-width:0.12054122">F5*</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.36500001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 145.36726,160.14791 5,-5 h 5"
@@ -186,5 +186,37 @@
          x="99.260735"
          y="97.883324"
          style="font-size:8.46666908px;stroke-width:0.39687511">Normal</tspan></text>
-  </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.82164764px;line-height:0.75;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.12054121"
+       x="150.78325"
+       y="165.32755"
+       id="text882-94"><tspan
+         sodipodi:role="line"
+         id="tspan880-3"
+         x="150.78325"
+         y="165.32755"
+         style="font-size:3.17500401px;line-height:0.75;stroke-width:0.12054121">* TA/TB Can be</tspan><tspan
+         sodipodi:role="line"
+         x="150.78325"
+         y="168.94379"
+         style="font-size:3.17500401px;line-height:0.75;stroke-width:0.12054121"
+         id="tspan1623">redefined in</tspan><tspan
+         sodipodi:role="line"
+         x="150.78325"
+         y="172.56001"
+         style="font-size:3.17500401px;line-height:0.75;stroke-width:0.12054121"
+         id="tspan1637">joystick menu</tspan></text>
+    <flowRoot
+       transform="matrix(0.3968755,0,0,0.3968755,53.930996,90.39978)"
+       xml:space="preserve"
+       id="flowRoot1625"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"><flowRegion
+         id="flowRegion1627"><rect
+           id="rect1629"
+           width="428.57144"
+           height="433.57144"
+           x="-65"
+           y="-87" /></flowRegion><flowPara
+         id="flowPara1631"></flowPara></flowRoot>  </g>
 </svg>
