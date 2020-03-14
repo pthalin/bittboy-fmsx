@@ -46,11 +46,13 @@ or implied, of Ludovic Jacomme.
 #include "global.h"
 #include "psp_sdl.h"
 #include "psp_kbd.h"
+#include "psp_joy.h"
 #include "psp_menu.h"
 #include "psp_fmgr.h"
 #include "psp_menu_kbd.h"
 #include "psp_menu_set.h"
-#include "psp_kbd.h"
+
+
 
 extern SDL_Surface *back_surface;
 

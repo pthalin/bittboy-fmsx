@@ -62,5 +62,9 @@ extern "C" {
 #ifdef __cplusplus
 }
 #endif
+/////
+void string_fill_with_space(char *buffer, int size);
+void psp_display_screen_menu(void);
+void psp_menu_display_save_name();
 
 # endif

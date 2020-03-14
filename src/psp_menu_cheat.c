@@ -45,6 +45,7 @@ or implied, of Ludovic Jacomme.
 #include "MSX.h"
 #include "global.h"
 #include "psp_sdl.h"
+#include "psp_editor.h"
 #include "psp_kbd.h"
 #include "psp_menu.h"
 #include "psp_fmgr.h"
@@ -572,10 +573,10 @@ psp_cheat_menu(void)
       /* Exit ! */
       psp_sdl_exit(0);
     } else
-    if ((c.Buttons & GP2X_CTRL_LTRIGGER) == GP2X_CTRL_LTRIGGER) {
-      psp_keyboard_menu();
-      end_menu = 1;
-    } else
+   // if ((c.Buttons & GP2X_CTRL_LTRIGGER) == GP2X_CTRL_LTRIGGER) {
+   //   psp_keyboard_menu();
+   //   end_menu = 1;
+   // } else
     if ((c.Buttons & GP2X_CTRL_RTRIGGER) == GP2X_CTRL_RTRIGGER) {
       psp_cheat_menu_reset_cheat();
     } else

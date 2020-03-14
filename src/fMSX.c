@@ -16,6 +16,7 @@
 #include "Help.h"
 
 #include "SDL.h"
+#include "psp_sdl.h"
 
 #include <stdio.h>
 #include <stdlib.h>

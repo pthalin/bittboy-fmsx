@@ -30,5 +30,5 @@ or implied, of Ludovic Jacomme.
 
 # ifndef _PSP_MENU_IRDA_H_
 # define _PSP_MENU_IRDA_H_
-
+int  psp_joystick_menu(void);
 # endif

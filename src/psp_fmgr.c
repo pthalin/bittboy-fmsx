@@ -52,6 +52,7 @@ or implied, of Ludovic Jacomme.
 #include "psp_menu.h"
 #include "psp_danzeff.h"
 
+#include "psp_joy.h"
 #include "psp_kbd.h"
 #include "psp_sdl.h"
 #include "psp_fmgr.h"
@@ -643,13 +644,13 @@ psp_fmgr_menu(int format, int drive_id)
 
       if (file_format == FMGR_FORMAT_ZIP) {
 
-        if (user_file_format == FMGR_FORMAT_STATE) /* State */ error = msx_load_state(user_filename, 1);
+        if (user_file_format == FMGR_FORMAT_STATE) /* State */ error = msx_load_state(user_filename);
         else
         if (user_file_format == FMGR_FORMAT_ROM) /* Rom */ error = msx_load_rom(user_filename, 1);
       }
       else 
       {
-        if (file_format == FMGR_FORMAT_STATE) /* State */ error = msx_load_state(user_filename, 0);
+        if (file_format == FMGR_FORMAT_STATE) /* State */ error = msx_load_state(user_filename);
         else
         if (file_format == FMGR_FORMAT_ROM) /* Rom */ error = msx_load_rom(user_filename, 0);
         else

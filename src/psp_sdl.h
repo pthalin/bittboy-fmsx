@@ -69,4 +69,7 @@
 
   extern void psp_sdl_select_font_6x10();
   extern void psp_sdl_select_font_8x8();
+  extern void psp_sdl_blit_thumb(int dst_x, int dst_y, SDL_Surface* thumb_surface);
+  extern void psp_sdl_blit_help();
+  extern unsigned char psp_convert_utf8_to_iso_8859_1(unsigned char c1, unsigned char c2);
 # endif

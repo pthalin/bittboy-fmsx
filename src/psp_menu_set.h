@@ -30,4 +30,5 @@ or implied, of Ludovic Jacomme.
 
 #ifndef _PSP_MENU_SET_
 #define _PSP_MENU_SET_
+void psp_settings_menu_reset(void);
 # endif

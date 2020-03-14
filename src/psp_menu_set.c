@@ -50,6 +50,7 @@ or implied, of Ludovic Jacomme.
 #include "psp_menu.h"
 #include "psp_fmgr.h"
 #include "psp_menu_kbd.h"
+#include "psp_menu_joy.h"
 #include "psp_menu_set.h"
 
 extern SDL_Surface *back_surface;

@@ -46,7 +46,6 @@ OBJS =  \
 ./src/psp_menu_set.o \
 ./src/psp_menu_help.o \
 ./src/psp_menu_joy.o \
-./src/psp_menu_kbd.o \
 ./src/psp_menu_cheat.o \
 ./src/psp_menu_list.o \
 ./src/psp_editor.o \

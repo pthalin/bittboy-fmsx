@@ -263,4 +263,23 @@ void ResetMSX(int hard);
 /*************************************************************/
 void RewindTape();
 
+/////
+int msx_load_file_cheat(char *FileName);
+int msx_load_file_settings(char *FileName);
+int msx_load_disk(char *FileName, int drive_id);
+int msx_load_rom(char *FileName, int zip_format);
+int msx_load_state(char *FileName);
+char* load_comment_if_exists(char *Name);
+int load_thumb_if_exists(char *Name);
+void load_comment_list();
+void load_thumb_list();
+int msx_save_cheat(void);
+int msx_joy_save(void);
+void msx_default_settings(void);
+int msx_save_settings(void);
+# if !defined(CAANOO_MODE)
+void myPowerSetClockFrequency(int cpu_clock);
+#endif
+int msx_eject_rom(void);
+
 #endif /* MSX_H */

@@ -234,4 +234,6 @@ or implied, of Ludovic Jacomme.
   extern int  psp_kbd_is_danzeff_mode(void);
   extern void psp_kbd_display_active_mapping(void);
   extern int psp_kbd_load_mapping(char *kbd_filename);
+  extern void kbd_change_auto_fire(int auto_fire);
+
 # endif
