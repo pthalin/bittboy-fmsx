@@ -85,6 +85,7 @@ MSX_LAST_RENDER
     int        msx_current_clock;
 # endif
     int        bittboy_ta_func;
+    int        bittboy_tb_func;
     int        psp_sound_volume;
     int        msx_snd_enable;
     int        msx_view_fps;

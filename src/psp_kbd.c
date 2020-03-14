@@ -848,6 +848,10 @@ msx_decode_key(int psp_b, int button_pressed)
     psp_kbd_mapping[psp_b] = MSX.bittboy_ta_func;
   } 
 
+  if (psp_b == KBD_SQUARE /*TB*/) {
+    psp_kbd_mapping[psp_b] = MSX.bittboy_tb_func;
+  } 
+
   if (psp_b == KBD_START) {
      if (button_pressed) psp_kbd_enter_danzeff();
   } else

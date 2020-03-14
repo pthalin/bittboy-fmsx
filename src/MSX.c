@@ -2741,6 +2741,8 @@ loc_msx_load_settings(char *chFileName)
 # endif
     if (!strcasecmp(Buffer,"bittboy_ta_func")) MSX.bittboy_ta_func = Value;
     else
+    if (!strcasecmp(Buffer,"bittboy_tb_func")) MSX.bittboy_tb_func = Value;
+    else
     if (!strcasecmp(Buffer,"psp_skip_max_frame")) MSX.psp_skip_max_frame = Value;
     else
     if (!strcasecmp(Buffer,"psp_sound_volume"))  MSX.psp_sound_volume = Value;

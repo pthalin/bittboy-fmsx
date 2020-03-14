@@ -56,7 +56,7 @@ extern SDL_Surface *back_surface;
 
 enum {
   MENU_JOY_TA_FUNC,
- // MENU_JOY_ANALOG,
+  MENU_JOY_TB_FUNC,
   MENU_JOY_AUTOFIRE_T,
   MENU_JOY_AUTOFIRE_M,
   MENU_JOY_LOAD,
@@ -69,7 +69,8 @@ enum {
   static menu_item_t menu_list[] =
   {
    // { "Swap Analog/Cursor :"},
-    { "TA F5/UP           :"},
+    { "TA Key map         :"},
+    { "TB Key map         :"},
     { "Auto fire period   :"},
     { "Auto fire mode     :"},
 
@@ -82,8 +83,8 @@ enum {
 
   static int cur_menu_id = 0;
 
- // static int psp_reverse_analog    = 0;
-  static enum msx_keys_emum bittboy_ta_func = MSXK_F5;
+  static int bittboy_ta_func = MSXK_F5;
+  static int bittboy_tb_func = MSXK_F1;
   static int msx_auto_fire_period = 0;
   static int msx_auto_fire_mode   = 0;
  
@@ -120,9 +121,13 @@ psp_display_screen_joystick_menu(void)
     psp_sdl_back2_print(x, y, menu_list[menu_id].title, color);
 
     if (menu_id == MENU_JOY_TA_FUNC) {
-      if (bittboy_ta_func == MSXK_F5) strcpy(buffer,"F5");
-      else                            strcpy(buffer,"UP");
-       string_fill_with_space(buffer, 4);
+       strcpy(buffer, psp_msx_key_info[bittboy_ta_func].name);
+       string_fill_with_space(buffer, 10);
+       psp_sdl_back2_print(140, y, buffer, color);
+    } else
+    if (menu_id == MENU_JOY_TB_FUNC) {
+       strcpy(buffer, psp_msx_key_info[bittboy_tb_func].name);
+       string_fill_with_space(buffer, 10);
        psp_sdl_back2_print(140, y, buffer, color);
     } else
     if (menu_id == MENU_JOY_AUTOFIRE_T) {
@@ -151,6 +156,7 @@ static void
 psp_joystick_menu_init(void)
 {
   bittboy_ta_func      = MSX.bittboy_ta_func;
+  bittboy_tb_func      = MSX.bittboy_tb_func;
   msx_auto_fire_period = MSX.msx_auto_fire_period;
   msx_auto_fire_mode   = MSX.msx_auto_fire;
 }
@@ -160,6 +166,7 @@ psp_joystick_menu_validate(void)
 {
   /* Validate */
   MSX.bittboy_ta_func  = bittboy_ta_func;
+  MSX.bittboy_tb_func  = bittboy_tb_func;
   MSX.msx_auto_fire_period = msx_auto_fire_period;
   if (msx_auto_fire_mode != MSX.msx_auto_fire) {
     kbd_change_auto_fire(msx_auto_fire_mode);
@@ -307,8 +314,12 @@ psp_joystick_menu(void)
       {
         case MENU_JOY_AUTOFIRE_T  : psp_joystick_menu_autofire( step );
         break;   
-        case MENU_JOY_TA_FUNC     : if (bittboy_ta_func == MSXK_F5) bittboy_ta_func = MSXK_JOY_UP; else bittboy_ta_func = MSXK_F5;
-        break;                           
+        case MENU_JOY_TA_FUNC     : bittboy_ta_func = (bittboy_ta_func+step)%MSXK_C_FPS;
+                                    if (bittboy_ta_func < 0) bittboy_ta_func = MSXK_C_FPS-1;   
+        break; 
+        case MENU_JOY_TB_FUNC     : bittboy_tb_func = (bittboy_tb_func+step)%MSXK_C_FPS;
+                                    if (bittboy_tb_func < 0) bittboy_tb_func = MSXK_C_FPS-1;   
+        break;                            
         case MENU_JOY_AUTOFIRE_M  : msx_auto_fire_mode = ! msx_auto_fire_mode;
         break;              
       }
