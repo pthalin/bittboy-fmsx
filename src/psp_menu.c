@@ -485,7 +485,7 @@ psp_main_menu(void)
 			/* For some reasons, not setting ZIP support to 1 even for uncompressed roms
 			does not work ?
 			*/
-			error = 1;
+			error = msx_load_rom(CartA, 0);
 			loaded_msx = 0;
 			if (error == 1) end_menu = 1;
 		break;
