@@ -491,9 +491,9 @@ psp_main_menu(void)
 		break;
 		// It's a Disk image
 		case 2:
-			error = ChangeDisk(0, DiskA);
+			error = msx_load_disk(DiskA,0);
 			loaded_msx = 0;
-			if (error == 1) end_menu = 1;
+			end_menu = 1;
 		break;
 		case 3:
 			error = msx_load_rom(ZipFile, 1);
