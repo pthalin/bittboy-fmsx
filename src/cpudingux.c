@@ -27,7 +27,7 @@ authors and should not be interpreted as representing official policies, either 
 or implied, of Ludovic Jacomme.
 
 */
-#define _GNU_SOURCE
+//#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdlib.h>

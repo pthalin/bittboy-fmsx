@@ -65,6 +65,8 @@ extern "C" {
 /////
 void string_fill_with_space(char *buffer, int size);
 void psp_display_screen_menu(void);
-void psp_menu_display_save_name();
+void psp_menu_display_save_name(void);
+int psp_main_menu_save_current(void);
+int psp_main_menu_load_current(void);
 
 # endif

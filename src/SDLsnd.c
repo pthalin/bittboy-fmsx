@@ -58,7 +58,7 @@ static SCC    *scc;
 /** Main loop of the sound server.                          **/
 /*************************************************************/
 static char sound_buffer[2048];
-static void DSPCallBack(void* unused, INT8 *stream, int len)
+static void DSPCallBack(void* unused, UINT8 *stream, int len)
 {
   register int   J;
   register INT16 P,O,A,S;
@@ -87,7 +87,7 @@ static void DSPCallBack(void* unused, INT8 *stream, int len)
       sound_buffer[J+3]=R1>>8;
     }
     long volume = (SDL_MIX_MAXVOLUME * gp2xGetSoundVolume()) / 100;
-    SDL_MixAudio(stream, (unsigned char *)sound_buffer, len, volume);
+    SDL_MixAudio((signed char *)stream, (unsigned char *)sound_buffer, len, volume);
   } else {
     memset(stream, 0, len);
   }

@@ -487,19 +487,20 @@ psp_main_menu(void)
 			*/
 			error = msx_load_rom(CartA, 0);
 			loaded_msx = 0;
-			if (error == 1) end_menu = 1;
-		break;
-		// It's a Disk image
+			end_menu = 1;
+		        break;
 		case 2:
 			error = msx_load_disk(DiskA,0);
 			loaded_msx = 0;
 			end_menu = 1;
-		break;
+		        break;
 		case 3:
 			error = msx_load_rom(ZipFile, 1);
 			loaded_msx = 0;
-			if (error == 0) end_menu = 1;
-		break;
+			end_menu = 1;
+		        break;
+                default:
+			break;
 	}
 
 

@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <signal.h>
+#include <sys/stat.h>
 
 extern char *Title;      /* Program title                       */
 extern int   UseSound;   /* Sound mode (#ifdef SOUND)           */

@@ -275,11 +275,33 @@ void load_comment_list();
 void load_thumb_list();
 int msx_save_cheat(void);
 int msx_joy_save(void);
+void msx_joy_load(void);
 void msx_default_settings(void);
 int msx_save_settings(void);
 # if !defined(CAANOO_MODE)
 void myPowerSetClockFrequency(int cpu_clock);
 #endif
 int msx_eject_rom(void);
+int msx_snapshot_del_slot(int save_id);
+int msx_snapshot_save_slot(int save_id);
+int msx_snapshot_load_slot(int load_id);
+void emulator_reset(void);
+void msx_treat_command_key(int msx_idx);
+void msx_apply_cheats();
+int msx_load_cheat();
+int InitMSX(void);
+void msx_kbd_load(void);
+int msx_load_settings(void);
+void update_save_name(char *Name);
+
+//Implemented in SDL files
+void msx_change_render_mode(int new_render_mode);
+void audio_resume(void);
+void audio_pause(void);
+void msx_save_back_to_blit(void);
+void MsxKeyUp(int index, int bit_mask);
+void MsxKeyDown(int index, int bit_mask);
+void MsxJoyUp(int bit_mask);
+void MsxJoyDown(int bit_mask);
 
 #endif /* MSX_H */

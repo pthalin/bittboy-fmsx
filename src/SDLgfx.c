@@ -27,6 +27,9 @@
 #include "Sound.h"
 #include "SDLfnt.h"
 #include "SDLfilter.h"
+#include "psp_danzeff.h"
+#include "psp_kbd.h"
+#include "psp_joy.h"
 
 int loaded_msx = 0;
 
@@ -277,7 +280,7 @@ PutImage_normal(void)
   int x;
   int y;
   uint *ptr_dst = back_surface->pixels;
-  uint *ptr_src = XBuf;
+  uint *ptr_src = (uint *) XBuf;
  
   ptr_dst += 12 + (160 * 6);
 

@@ -49,6 +49,7 @@ extern "C" {
 # define FMGR_FORMAT_SET   8
 
   extern int psp_fmgr_menu(int format, int drive_id);
+  extern int psp_fmgr_get_dir_list(char *basedir, int dirmax, char **dirname);
 
 #ifdef __cplusplus
 }

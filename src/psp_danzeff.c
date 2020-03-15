@@ -4,6 +4,7 @@
 #include "global.h"
 #include "psp_danzeff.h"
 #include "SDL_image.h"
+#include "psp_fmgr.h"
 
 #define false 0
 #define true 1

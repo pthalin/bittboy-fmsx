@@ -34,4 +34,6 @@ or implied, of Ludovic Jacomme.
 # define MSX_MAX_RAM_SIZE (MSX_MAX_RAM_PAGE*0x4000)
 # define MSX_RAM_SIZE     (MSX.msx_ram_pages*0x4000)
 
+int psp_cheat_menu(void);
+
 # endif

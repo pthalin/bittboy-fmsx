@@ -181,6 +181,7 @@ typedef struct gp2xCtrlData SceCtrlData;
   extern int  gp2xGetSoundVolume();
   extern void gp2xDecreaseVolume();
   extern void gp2xIncreaseVolume();
+  extern int  gp2xInitSoundVolume();
 
 # if defined(GP2X_MODE)
   extern int  gp2xInsmodMMUhack();

@@ -60,6 +60,7 @@ extern "C" {
   extern int psp_joy_load_settings(char *kbd_filename);
   extern int psp_joy_save_settings(char *kbd_filename);
   extern void psp_joy_default_settings();
+  extern int psp_joy_load_settings_file(FILE *JoyFile);
 
 # ifdef __cplusplus
 }

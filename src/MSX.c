@@ -29,6 +29,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include "psp_fmgr.h"
+#include "psp_menu.h"
+#include "psp_joy.h"
+#include "psp_kbd.h"
 
 #ifdef __BORLANDC__
 #include <dir.h>
