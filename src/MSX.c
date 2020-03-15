@@ -65,6 +65,8 @@
 #include "psp_sdl.h"
 #include "psp_kbd.h"
 
+int skip_disk_rom = 0;
+
 //LUDO:
   MSX_t MSX;
 
@@ -139,7 +141,7 @@ char *PrnName    = NULL;           /* Printer redirect. file */
 FILE *PrnStream;
 
 /** Cassette tape ********************************************/
-char *CasName    = "default.cas";  /* Tape image file        */
+char CasName[256]    = "default.cas";  /* Tape image file        */
 FILE *CasStream;
 
 /** Serial port **********************************************/
@@ -531,11 +533,14 @@ InitMSX(void)
   }
 
   /* Try loading DiskROM */
-  if(P=LoadROM("disk.rom",0x4000,0))
-  {
-    if(Verbose) puts("  Opening disk.rom...OK");
-    MemMap[3][1][2]=P;
-    MemMap[3][1][3]=P+0x2000;
+  if(skip_disk_rom != 1) /* Skip disk.rom if tape is used */
+  { 
+    if(P=LoadROM("disk.rom",0x4000,0))
+    {
+      if(Verbose) puts("  Opening disk.rom...OK");
+      MemMap[3][1][2]=P;
+      MemMap[3][1][3]=P+0x2000;
+    }
   }
 
   /* Apply patches to BIOS */

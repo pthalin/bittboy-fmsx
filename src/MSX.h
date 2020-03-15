@@ -121,9 +121,11 @@ extern char DiskB[256];                   /* Drive B disk image  */
 extern char ZipFile[256];                   /* Cartridge A ROM file*/
 extern char *SndName;                 /* Soundtrack log file */
 extern char *PrnName;                 /* Printer redir. file */
-extern char *CasName;                 /* Tape image file     */
+extern char CasName[256];                 /* Tape image file     */
 extern char *ComName;                 /* Serial redir. file  */
 extern char *StateName;               /* State save name     */
+
+extern int skip_disk_rom;
 
 extern FILE *CasStream;               /* Cassette I/O stream */
 

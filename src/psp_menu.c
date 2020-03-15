@@ -453,9 +453,9 @@ psp_main_menu_editor()
   psp_editor_menu( TmpFileName );
 }
 
-//Gameblabla
 extern int loaded_msx;
 extern char ZipFile[256];
+
 
 int
 psp_main_menu(void)
@@ -476,9 +476,10 @@ psp_main_menu(void)
 	old_pad   = 0;
 	last_time = 0;
 	end_menu  = 0;
+	skip_disk_rom = 0;
 
 	error = 0;
-
+	
 	switch (loaded_msx)
 	{
 		case 1:
@@ -496,6 +497,10 @@ psp_main_menu(void)
 		        break;
 		case 3:
 			error = msx_load_rom(ZipFile, 1);
+			loaded_msx = 0;
+			end_menu = 1;
+		        break;
+                case 4: //Cas file loaded in InitMSX()
 			loaded_msx = 0;
 			end_menu = 1;
 		        break;

@@ -196,7 +196,7 @@ int InitMachine(int argc, char* argv[])
 			snprintf(CartA, sizeof(CartA), "%s", argv[1]);
 			loaded_msx = 1;
 		}
-		if ( strstr (argv[1],".zip") != NULL ||
+		else if ( strstr (argv[1],".zip") != NULL ||
                      strstr (argv[1],".ZIP") != NULL )
 		{
 			if (Verbose) printf("File is a ROM file (ZIP file)\n");
@@ -209,6 +209,14 @@ int InitMachine(int argc, char* argv[])
 			if (Verbose) printf("File is a DSK file\n");
 			snprintf(DiskA, sizeof(DiskA), "%s", argv[1]);
 			loaded_msx = 2;
+		}
+		else if ( strstr (argv[1],".cas") != NULL ||
+			  strstr (argv[1],".CAS") != NULL )
+		{
+			if (Verbose) printf("File is a CAS file\n");
+			snprintf(CasName, sizeof(CasName), "%s", argv[1]);
+                        skip_disk_rom = 1;
+			loaded_msx = 3;
 		}
 	}
 
