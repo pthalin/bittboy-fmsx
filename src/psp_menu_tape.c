@@ -93,6 +93,7 @@ psp_display_screen_tape_menu(void)
 
     y += y_step;
   }
+  psp_menu_display_save_name();
 }
 
 
