@@ -736,8 +736,9 @@ InitMSX(void)
 
   /* Open casette image */
   if(CasName)
-    if(CasStream=fopen(CasName,"r+b"))
+    if(CasStream=fopen(CasName,"r+b")) {
       if(Verbose) printf("Using %s as a tape\n",CasName);
+    }
 
   if(Verbose)
   {
@@ -3488,6 +3489,29 @@ msx_load_disk(char *FileName, int drive_id)
   if (scan) *scan = '\0';
   update_save_name(SaveName);
   error = loc_load_disk(FileName, drive_id);
+
+  if (! error ) {
+    msx_kbd_load();
+    msx_joy_load();
+    msx_load_cheat();
+    msx_load_settings();
+  }
+
+  return error;
+}
+int
+msx_load_tape(char *FileName)
+{
+  char *scan;
+  char  SaveName[MAX_PATH+1];
+  int   error;
+
+  error = 1;
+
+  strncpy(SaveName,FileName,MAX_PATH);
+  scan = strrchr(SaveName,'.');
+  if (scan) *scan = '\0';
+  update_save_name(SaveName);
 
   if (! error ) {
     msx_kbd_load();

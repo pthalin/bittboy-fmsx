@@ -269,6 +269,7 @@ void RewindTape();
 int msx_load_file_cheat(char *FileName);
 int msx_load_file_settings(char *FileName);
 int msx_load_disk(char *FileName, int drive_id);
+int msx_load_tape(char *FileName);
 int msx_load_rom(char *FileName, int zip_format);
 int msx_load_state(char *FileName);
 char* load_comment_if_exists(char *Name);

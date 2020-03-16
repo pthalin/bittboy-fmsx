@@ -237,4 +237,5 @@ or implied, of Ludovic Jacomme.
   extern void kbd_change_auto_fire(int auto_fire);
   extern void psp_kbd_default_settings(void);
   extern int psp_kbd_save_mapping(char *kbd_filename);
+  extern void psp_kbd_run_command(char *Command);
 # endif

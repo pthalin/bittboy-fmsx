@@ -216,7 +216,7 @@ int InitMachine(int argc, char* argv[])
 			if (Verbose) printf("File is a CAS file\n");
 			snprintf(CasName, sizeof(CasName), "%s", argv[1]);
                         skip_disk_rom = 1;
-			loaded_msx = 3;
+			loaded_msx = 4;
 		}
 	}
 

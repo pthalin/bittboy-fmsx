@@ -51,6 +51,7 @@ or implied, of Ludovic Jacomme.
 #include "psp_menu_kbd.h"
 #include "psp_menu_joy.h"
 #include "psp_menu_set.h"
+#include "psp_menu_tape.h"
 #include "psp_menu_cheat.h"
 #include "psp_menu_help.h"
 #include "psp_editor.h"
@@ -78,6 +79,8 @@ enum {
   // MENU_KEYBOARD,
   // MENU_JOYSTICK,
   MENU_SETTINGS,
+  MENU_TAPE,
+
 
   MENU_RESET,
   // MENU_BACK,
@@ -107,7 +110,8 @@ enum {
     { "Cheats" },
     // { "Keyboard" },
     // { "Joystick" },
-    { "Settings" },
+    { "Settings"  },
+    { "Tape" },
 
     { "Reset" },
     // { "Back to MSX" },
@@ -172,6 +176,7 @@ psp_display_screen_menu(void)
         case MENU_DEL_SLOT:
         case MENU_EJECT_ROM:
         case MENU_SETTINGS:
+        case MENU_TAPE:
         case MENU_RESET:
           y += y_step;
           break;
@@ -500,7 +505,7 @@ psp_main_menu(void)
 			loaded_msx = 0;
 			end_menu = 1;
 		        break;
-                case 4: //Cas file loaded in InitMSX()
+                case 4: error = msx_load_tape(CasName);
 			loaded_msx = 0;
 			end_menu = 1;
 		        break;
@@ -617,6 +622,9 @@ psp_main_menu(void)
 
 			// case MENU_BACK      : end_menu = 1;
 			// break;
+                        case MENU_TAPE      : psp_tape_menu();
+					      end_menu = 1;
+                        break;
 
 			case MENU_EXIT      : psp_main_menu_exit();
 			break;
