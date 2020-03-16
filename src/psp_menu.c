@@ -66,7 +66,7 @@ enum {
   MENU_SAVE_SLOT,
   MENU_DEL_SLOT,
 
-  MENU_SCREENSHOT,
+   MENU_TAPE,
   // MENU_HELP,
 
   MENU_LOAD_ROM,
@@ -79,8 +79,7 @@ enum {
   // MENU_KEYBOARD,
   // MENU_JOYSTICK,
   MENU_SETTINGS,
-  MENU_TAPE,
-
+  MENU_SCREENSHOT,
 
   MENU_RESET,
   // MENU_BACK,
@@ -98,7 +97,7 @@ enum {
     { "Save state" },
     { "Delete state" },
 
-    { "Save Screenshot" },
+    { "Tape" },
     // { "Help" },
 
     { "Load Rom" },
@@ -111,8 +110,9 @@ enum {
     // { "Keyboard" },
     // { "Joystick" },
     { "Settings"  },
-    { "Tape" },
 
+    { "Save Screenshot" },
+    
     { "Reset" },
     // { "Back to MSX" },
 
