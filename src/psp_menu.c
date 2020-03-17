@@ -158,6 +158,7 @@ psp_display_screen_menu(void)
   int x_step  = 30; /* dc 20130702 */
 
   psp_sdl_blit_background();
+  psp_sdl_back2_print(15, 220, "Manual & Updates -> github.com/pthalin/bittboy-msx", PSP_MENU_TEXT2_COLOR);
 
   for (menu_id = 0; menu_id < MAX_MENU_ITEM; menu_id++, y += y_step) {
     color = PSP_MENU_TEXT_COLOR;
