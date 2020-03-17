@@ -1,6 +1,6 @@
 CHAINPREFIX=/opt/buildroot-bittboy/output/host
 CROSS_COMPILE=$(CHAINPREFIX)/bin/arm-buildroot-linux-musleabi-
-MSX_VERSION=1.0.0
+MSX_VERSION=1.1.0
 
 CC = $(CROSS_COMPILE)gcc
 CXX = $(CROSS_COMPILE)g++

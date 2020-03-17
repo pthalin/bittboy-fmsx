@@ -1,2 +1,6 @@
 1.0.0
 - Initial release for Bittboy
+1.1.0
+- Tape .cas file support.
+- TA/TB keys can be remapped in Joystick menu.
+- Bug fixes.
