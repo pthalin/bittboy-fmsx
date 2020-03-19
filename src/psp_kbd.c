@@ -53,8 +53,8 @@ or implied, of Ludovic Jacomme.
 # define KBD_MIN_PENDING_TIME      10000
 //# define KBD_MIN_DANZEFF_TIME     150000
 # define KBD_MIN_DANZEFF_TIME      10000
-# define KBD_MIN_COMMAND_TIME      20000
-# define KBD_COMMAND_BOOT_DELAY     8000 //ms
+# define KBD_MIN_COMMAND_TIME      10000
+# define KBD_COMMAND_BOOT_DELAY     7000 //ms
 # define KBD_MIN_BATTCHECK_TIME 90000000 
 # define KBD_MIN_AUTOFIRE_TIME   1000000
 
@@ -855,6 +855,11 @@ msx_decode_key(int psp_b, int button_pressed)
 
   if (psp_b == KBD_SQUARE /*TB*/) {
     psp_kbd_mapping[psp_b] = MSX.bittboy_tb_func;
+  }
+
+  // Map to joystick
+  if ((psp_b >= KBD_UP) && (psp_b <= KBD_LEFT)) {
+      psp_b = psp_b - KBD_UP + KBD_JOY_UP;
   } 
 
   if (psp_b == KBD_START) {
