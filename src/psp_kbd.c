@@ -53,7 +53,8 @@ or implied, of Ludovic Jacomme.
 # define KBD_MIN_PENDING_TIME      10000
 //# define KBD_MIN_DANZEFF_TIME     150000
 # define KBD_MIN_DANZEFF_TIME      10000
-# define KBD_MIN_COMMAND_TIME     100000
+# define KBD_MIN_COMMAND_TIME      20000
+# define KBD_COMMAND_BOOT_DELAY     8000 //ms
 # define KBD_MIN_BATTCHECK_TIME 90000000 
 # define KBD_MIN_AUTOFIRE_TIME   1000000
 
@@ -728,6 +729,10 @@ psp_kbd_enter_command()
   int          msx_key     = 0;
 
   gp2xCtrlPeekBufferPositive(&c, 1);
+
+  if (SDL_GetTicks() < KBD_COMMAND_BOOT_DELAY) {
+    return 1;
+  }
 
   if (command_msx_pending) 
   {

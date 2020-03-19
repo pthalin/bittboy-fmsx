@@ -32,6 +32,7 @@
 #include "psp_menu.h"
 #include "psp_joy.h"
 #include "psp_kbd.h"
+#include "tape.h"
 
 #ifdef __BORLANDC__
 #include <dir.h>
@@ -143,6 +144,7 @@ FILE *PrnStream;
 /** Cassette tape ********************************************/
 char CasName[256]    = "default.cas";  /* Tape image file        */
 FILE *CasStream;
+enum cas_type_t CasType;
 
 /** Serial port **********************************************/
 char *ComName    = NULL;           /* Serial redirect. file  */
@@ -735,10 +737,17 @@ InitMSX(void)
   }
 
   /* Open casette image */
-  if(CasName)
+  if(CasName) {
     if(CasStream=fopen(CasName,"r+b")) {
       if(Verbose) printf("Using %s as a tape\n",CasName);
+    
+      switch(CasType) {
+	case ASCII:  psp_kbd_run_command("RUN\"CAS:\"\x17");        break;
+	case BINARY: psp_kbd_run_command("BLOAD\"CAS:\",R\x17");    break;
+	case BASIC:  psp_kbd_run_command("CLOAD\x17RUN\x17");       break;
+      }
     }
+  }
 
   if(Verbose)
   {

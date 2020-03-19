@@ -30,6 +30,7 @@
 #include "psp_danzeff.h"
 #include "psp_kbd.h"
 #include "psp_joy.h"
+#include "tape.h"
 
 int loaded_msx = 0;
 
@@ -77,6 +78,7 @@ int SaveCPU   = 0;
 
 /** Various SDL related variables ****************************/
 extern SDL_Surface *back_surface;
+extern enum cas_type_t CasType;
 
 /** These functions are called on signals ********************/
 #ifdef UNIX
@@ -215,6 +217,7 @@ int InitMachine(int argc, char* argv[])
 		{
 			if (Verbose) printf("File is a CAS file\n");
 			snprintf(CasName, sizeof(CasName), "%s", argv[1]);
+  			CasType = cas_type(CasName);
                         skip_disk_rom = 1;
 			loaded_msx = 4;
 		}

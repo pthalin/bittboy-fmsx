@@ -53,6 +53,7 @@ OBJS =  \
 ./src/unzip.o \
 ./src/ioapi.o \
 ./src/sha1.o \
+./src/tape.o \
 ./src/psp_fmgr.o
 
 
