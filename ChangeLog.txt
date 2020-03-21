@@ -4,3 +4,7 @@
 - Tape .cas file support.
 - TA/TB keys can be remapped in Joystick menu.
 - Bug fixes.
+1.2.0
+- Auto load of cas files.
+- Fixed Joystick bug.
+
