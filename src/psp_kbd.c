@@ -848,6 +848,8 @@ int
 msx_decode_key(int psp_b, int button_pressed)
 {
   int wake = 0;
+
+
   
   if (psp_b == KBD_CROSS /*TA*/) {
     psp_kbd_mapping[psp_b] = MSX.bittboy_ta_func;
@@ -857,7 +859,9 @@ msx_decode_key(int psp_b, int button_pressed)
     psp_kbd_mapping[psp_b] = MSX.bittboy_tb_func;
   }
 
-  // Map to joystick
+  // Map to joystick?
+  if (MSX.joy_cursor_keys) {}
+  else 
   if ((psp_b >= KBD_UP) && (psp_b <= KBD_LEFT)) {
       psp_b = psp_b - KBD_UP + KBD_JOY_UP;
   } 

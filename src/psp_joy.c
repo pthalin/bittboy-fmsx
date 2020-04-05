@@ -61,6 +61,7 @@ psp_joy_default_settings()
   MSX.msx_auto_fire         = 0;
   MSX.msx_auto_fire_period  = 10;
   MSX.msx_auto_fire_pressed = 0;
+  MSX.joy_cursor_keys       = 0;
   MSX.bittboy_ta_func       = MSXK_F5;
   MSX.bittboy_tb_func       = MSXK_F1;
 }
@@ -88,6 +89,8 @@ psp_joy_load_settings_file(FILE *JoyFile)
     *Scan = '\0';
     Value = atoi(Scan + 1);
 
+    if (!strcasecmp(Buffer,"joy_cursor_keys"))      MSX.joy_cursor_keys = Value;
+    else
     if (!strcasecmp(Buffer,"bittboy_ta_func"))      MSX.bittboy_ta_func = Value;
     else
     if (!strcasecmp(Buffer,"bittboy_tb_func"))      MSX.bittboy_tb_func = Value;
@@ -109,7 +112,7 @@ psp_joy_save_settings(char *joy_filename)
   error   = 1;
 
   if (JoyFile != (FILE*)0) {
-
+    fprintf( JoyFile, "joy_cursor_keys=%d\n"     , MSX.joy_cursor_keys);
     fprintf( JoyFile, "bittboy_ta_func=%d\n"     , MSX.bittboy_ta_func);
     fprintf( JoyFile, "bittboy_tb_func=%d\n"     , MSX.bittboy_tb_func);
     fprintf( JoyFile, "msx_auto_fire_period=%d\n", MSX.msx_auto_fire_period);

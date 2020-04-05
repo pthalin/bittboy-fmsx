@@ -86,6 +86,7 @@ MSX_LAST_RENDER
 # endif
     int        bittboy_ta_func;
     int        bittboy_tb_func;
+    int        joy_cursor_keys;
     int        psp_sound_volume;
     int        msx_snd_enable;
     int        msx_view_fps;

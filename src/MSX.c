@@ -2646,8 +2646,10 @@ msx_default_settings()
   MSX.msx_use_8950        = 0;
   MSX.msx_uperiod         = 100;
   MSX.msx_use_2413        = 0;
-  MSX.msx_render_mode     = MSX_RENDER_FULL; //MSX_RENDER_FAST;
+  MSX.msx_render_mode     = MSX_RENDER_FULL;
   MSX.bittboy_ta_func     = MSXK_F5;
+  MSX.bittboy_tb_func     = MSXK_F1;
+  MSX.joy_cursor_keys     = 0;
 # if !defined(CAANOO_MODE)
   MSX.psp_cpu_clock       = GP2X_DEF_EMU_CLOCK;
 # endif
@@ -2760,6 +2762,8 @@ loc_msx_load_settings(char *chFileName)
     if (!strcasecmp(Buffer,"bittboy_ta_func")) MSX.bittboy_ta_func = Value;
     else
     if (!strcasecmp(Buffer,"bittboy_tb_func")) MSX.bittboy_tb_func = Value;
+    else
+    if (!strcasecmp(Buffer,"joy_cursor_keys")) MSX.joy_cursor_keys = Value;
     else
     if (!strcasecmp(Buffer,"psp_skip_max_frame")) MSX.psp_skip_max_frame = Value;
     else
