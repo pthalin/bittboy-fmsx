@@ -7,4 +7,6 @@
 1.2.0
 - Auto load of cas files.
 - Fixed Joystick bug.
-
+1.3.0
+- Map control pad to cursor keys
+- MSXDOS2 support
