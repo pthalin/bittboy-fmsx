@@ -2653,7 +2653,7 @@ msx_default_settings()
 # if !defined(CAANOO_MODE)
   MSX.psp_cpu_clock       = GP2X_DEF_EMU_CLOCK;
 # endif
-  MSX.psp_sound_volume    = 1;
+  MSX.psp_sound_volume    = 5;
   MSX.msx_speed_limiter   = 60;
   MSX.msx_view_fps        = 0;
   MSX.psp_screenshot_id   = 0;

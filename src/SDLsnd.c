@@ -62,7 +62,8 @@ static void DSPCallBack(void* unused, UINT8 *stream, int len)
 {
   register int   J;
   register INT16 P,O,A,S;
-  int R1,R2;
+  int R16;
+  INT32 R32;
 
   if (MSX.msx_snd_enable) {
     for(J=0;J<len;J+=4)
@@ -71,22 +72,25 @@ static void DSPCallBack(void* unused, UINT8 *stream, int len)
       S=SCC_calc(scc);
       O=Use2413? OPLL_calc(opll): 0;
       A=Use8950? Y8950UpdateOne(fm_opl): 0;
-      if (UseStereo) {
+      //if (UseStereo) {
         //R1=P+ (A >> 4)+S;
-        R1=P+A+S;
-        R2=O+S;
-      } else {
+        //R1=P+A+S;
+        //R2=O+S;
+      //} else {
         //R1=R2=P+O+(A >> 4)+S;
-        R1=R2=P+O+A+S;
-      }
-      R1 = R1 * MSX.psp_sound_volume;
-      R2 = R2 * MSX.psp_sound_volume;
-      sound_buffer[J+0]=R2&0x00FF;
-      sound_buffer[J+1]=R2>>8;
-      sound_buffer[J+2]=R1&0x00FF;
-      sound_buffer[J+3]=R1>>8;
+        R16=P+O+A+S;
+     // }
+      R32 = 2* (INT32)R16 * (INT32)MSX.psp_sound_volume;
+      if(R32>32767) R32 = 32767;
+      if(R32<-32768) R32 = -32768;
+      R16 = R32;
+      sound_buffer[J+0]=R16&0x00FF;
+      sound_buffer[J+1]=R16>>8;
+      sound_buffer[J+2]=R16&0x00FF;
+      sound_buffer[J+3]=R16>>8;
     }
-    long volume = (SDL_MIX_MAXVOLUME * gp2xGetSoundVolume()) / 100;
+    //long volume = (SDL_MIX_MAXVOLUME * gp2xGetSoundVolume()) / 100;
+    long volume = SDL_MIX_MAXVOLUME;
     SDL_MixAudio((signed char *)stream, (unsigned char *)sound_buffer, len, volume);
   } else {
     memset(stream, 0, len);
@@ -112,7 +116,7 @@ static int OpenSoundDevice(int Rate)
   desired->freq=Rate;
   desired->format=AUDIO_S16LSB; /* 16-bit signed audio */
   desired->samples=SndBufSize;  /* size audio buffer */
-  desired->channels=2;
+  desired->channels=1;
 
   /* Our callback function */
   desired->callback=DSPCallBack;

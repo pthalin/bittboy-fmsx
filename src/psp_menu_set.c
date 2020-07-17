@@ -112,7 +112,7 @@ enum {
   static int msx_render_mode      = MSX_RENDER_ZOOM;
   static int msx_speed_limiter    = 60;
   static int psp_cpu_clock        = GP2X_DEF_EMU_CLOCK;
-  static int psp_sound_volume     = 3;
+  static int psp_sound_volume     = 5;
   static int msx_version          = 0;
   static int msx_ram_pages        = 16;
   static int msx_ntsc             = 1;
