@@ -1,6 +1,6 @@
-CHAINPREFIX=/opt/buildroot-bittboy/output/host
+CHAINPREFIX=/opt/buildroot-cfw-bittboy/output/host
 CROSS_COMPILE=$(CHAINPREFIX)/bin/arm-buildroot-linux-musleabi-
-MSX_VERSION=1.3.0
+MSX_VERSION=1.4.0
 
 CC = $(CROSS_COMPILE)gcc
 CXX = $(CROSS_COMPILE)g++
@@ -12,20 +12,17 @@ SDL_LIBS    := $(shell $(SYSROOT)/usr/bin/sdl-config --libs)
 OUTPUTNAME = ./bittboy-msx/bittboy-msx
 DEFINES = -DHAVE_STDINT_H -DVERSION_BITTBOY 
 INCLUDES = -Iinclude $(SDL_CFLAGS)
-OPT_FLAGS  = -Ofast -fdata-sections -fdata-sections -fno-common -fno-PIC -flto
-EXTRA_LDFLAGS = -lasound -lmikmod -Wl,--as-needed -Wl,--gc-sections -flto -s
 
-CFLAGS = $(DEFINES) $(INCLUDES) $(OPT_FLAGS) -std=gnu11
+CFLAGS = $(DEFINES) $(INCLUDES) $(OPT_FLAGS) 
 #-DSDL 
 CFLAGS += -DFMSX -DUNIX -DNARROW -DSOUND -DBPP16 -DLSB_FIRST
 CFLAGS += -DDINGUX_MODE
 CFLAGS += -DLINUX_MODE
 CFLAGS += -DNO_STDIO_REDIRECT
 CFLAGS += -DMSX_VERSION=\"$(MSX_VERSION)\"
-CFLAGS += -DMPU_JZ4740
-CFLAGS += -O2 -fomit-frame-pointer -ffunction-sections -ffast-math -fsingle-precision-constant
-CXXFLAGS = $(DEFINES) $(INCLUDES) $(OPT_FLAGS) -std=gnu++11 
-LDFLAGS = -s -Wl,--start-group -lSDL -lSDL_image -lpng -ljpeg -lSDL_mixer -lfreetype -lSDL_ttf -logg -lvorbisidec -lmikmod  -lm -pthread -lz -lstdc++ $(EXTRA_LDFLAGS) -Wl,--end-group
+CFLAGS += -O2 
+CXXFLAGS = $(DEFINES) $(INCLUDES) $(OPT_FLAGS) 
+LDFLAGS = -s -Wl,--start-group -lasound -lSDL -lSDL_image -lpng -ljpeg -lSDL_mixer -lmikmod  -lm -lz -Wl,--end-group
 
 # Redream (main engine)
 OBJS =  \
