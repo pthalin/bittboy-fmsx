@@ -72,15 +72,9 @@ static void DSPCallBack(void* unused, UINT8 *stream, int len)
       S=SCC_calc(scc);
       O=Use2413? OPLL_calc(opll): 0;
       A=Use8950? Y8950UpdateOne(fm_opl): 0;
-      //if (UseStereo) {
-        //R1=P+ (A >> 4)+S;
-        //R1=P+A+S;
-        //R2=O+S;
-      //} else {
-        //R1=R2=P+O+(A >> 4)+S;
-        R16=P+O+A+S;
-     // }
-      R32 = 2* (INT32)R16 * (INT32)MSX.psp_sound_volume;
+      
+      R32=(INT32)P+(INT32)O+(INT32)A+(INT32)S;
+      
       if(R32>32767) R32 = 32767;
       if(R32<-32768) R32 = -32768;
       R16 = R32;
@@ -89,12 +83,14 @@ static void DSPCallBack(void* unused, UINT8 *stream, int len)
       sound_buffer[J+2]=R16&0x00FF;
       sound_buffer[J+3]=R16>>8;
     }
-    //long volume = (SDL_MIX_MAXVOLUME * gp2xGetSoundVolume()) / 100;
-    long volume = SDL_MIX_MAXVOLUME;
+    int volume = (SDL_MIX_MAXVOLUME * MSX.psp_sound_volume) / 10;
+    //long volume = SDL_MIX_MAXVOLUME;
     SDL_MixAudio((signed char *)stream, (unsigned char *)sound_buffer, len, volume);
   } else {
     memset(stream, 0, len);
   }
+  //printf("*** SND: len = %d, clip = %d\n", len, clip);
+  
 }
 
 /** OpenSoundDevice() ****************************************/
