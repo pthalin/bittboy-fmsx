@@ -8,7 +8,7 @@ Bittboy MSX is an MSX emulator for the Bittboy console.
 
 There are three modes for the key mapping Normal, Alt and Keyboard.
 
-![](controls.svg) ![](alt_controls.svg) ![](kbd_controls.svg)
+![](artwork/controls.svg) ![](artwork/alt_controls.svg) ![](artwork/kbd_controls.svg)
 
 
 ### Change Mapping
@@ -71,8 +71,7 @@ All tests have been done using a Bittboy.
 		
 ## Game included with permission from Authors
 		Ailen Attack             Marcos Daniel Blanco
-
-
+		BlockPuzzle		 David Heremans (https://github.com/turbor)
 
 
 ## About
