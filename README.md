@@ -71,8 +71,8 @@ All tests have been done using a Bittboy.
 		
 ## Game included with permission from Authors
 		Ailen Attack             Marcos Daniel Blanco
-		BlockPuzzle		 [David Heremans](https://github.com/turbor)
-		The Menace from Triton   [Santiago Ontañón](https://github.com/santiontanon) 
+		BlockPuzzle		 [David Heremans](http://github.com/turbor)
+		The Menace from Triton   [Santiago Ontañón](http://github.com/santiontanon)
 
 ## About
 
