@@ -1,4 +1,4 @@
-CHAINPREFIX=/opt/buildroot-cfw-bittboy/output/host
+CHAINPREFIX=/opt/buildroot-bittboy/output/host
 CROSS_COMPILE=$(CHAINPREFIX)/bin/arm-buildroot-linux-musleabi-
 MSX_VERSION=1.4.2
 
